@@ -6,21 +6,20 @@
 <body>
 <h1>This is a sample form</h1>
 <p> The next thing below will be a practice form that I am working on.</p>
+<!-- This is a sample form to demonstrate how to write an accessible form -->
 <h2>Sample form</h2>
 <form action="/practice.html" method="POST">
 <h1>This is a sample form</h1>
 <p>Good day everybody. My name is Joshua Bowen. I want to gather some information from you on this form. If you would be so kind as to provide it to me, I would like that very much.</p>
-<label for="username">username</label>
+<label for="username">username must be between 3 and 15 characters no spaces are allowed</label>
 <br>
-<input type="text" name="Username" id="username">
-</input>
-<label for="password">Password</label>
+<input type="text" name="Username" id="username" required minlength="3" maxlength="15" pattern="[a-zA-Z0-9]+"></input>
+<label for="password">Password minimum of 8 characters</label>
 <br>
-<input type="password" name="User-pw" id="password">
-</input>
-<label for="age">How old are you</label>
-<input type="number" step="1" id="age" name="age"
-</input>
+<input type="password" name="userpass" id="password"required minlength="8" maxlength="64"></input>
+<label for="age">How old are you You must be over the age of 13</label>
+<br>
+<input type="number" step="1" id="age" name="age"min="13" max="100" required></input>
 <p>The next option will have you rate this form on a scale from 1 to 5. One is the worst form and 5 is the best.</p>
 <label for="rating">Form rating</label>
 <br>
